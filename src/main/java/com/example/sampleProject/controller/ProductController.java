@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = { "http://frontend-sample-project-dl-f73-sandbox.apps.ocp3.eu-west-1.stable.aws.vwdl.de/", "http://frontend-sample-project-dl-f73-sandbox.apps.ocp3.eu-west-1.stable.aws.vwdl.de" })
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {
