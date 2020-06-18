@@ -3,7 +3,7 @@ spring:
     active: development
 ---
 spring:
-  profiles: development
+  profiles: test
   jpa:
     show_sql: false
     database: H2
@@ -11,12 +11,12 @@ spring:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
 ---
 spring:
-  profiles: prod
+  profiles: development
   jpa:
     hibernate:
       ddl-auto: update
     database: POSTGRESQL
   datasource:
-    url: jdbc:${DATABASE_URL}
+    url: jdbc:postgresql://postgresql:5432/sampleDataBase
 server:
   port: 8080
