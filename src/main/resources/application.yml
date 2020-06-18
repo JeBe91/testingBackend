@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: development
+  jpa:
+    show_sql: false
+    database: H2
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+---
+spring:
+  profiles: prod
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: POSTGRESQL
+  datasource:
+    url: jdbc:${DATABASE_URL}
+server:
+  port: 8080
