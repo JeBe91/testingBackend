@@ -13,11 +13,17 @@ spring:
 spring:
   profiles: development
   jpa:
+    show_sql: false
+      database: POSTGRESQL
+      generate-ddl: true
+      properties:
+        hibernate:
+          format_sql: true
     hibernate:
       ddl-auto: update
     database: POSTGRESQL
   datasource:
-    url: jdbc:postgresql://postgresql:5432/sampleDataBase
+    url: jdbc:postgresql://postgresqlXXX:5432/sampleDataBase
     username: username
     password: password
 server:
