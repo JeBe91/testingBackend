@@ -10,6 +10,6 @@ import java.util.List;
 public class StatelessController {
     @GetMapping("/info")
     public String getInfo() {
-        return "This is an sample Project";
+        return "This is an sample Project V2";
     }
 }
