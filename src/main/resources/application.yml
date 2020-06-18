@@ -19,10 +19,10 @@ spring:
       hibernate:
         format_sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     database: POSTGRESQL
   datasource:
-    url: jdbc:postgresql://postgresqlXXX:5432/sampleDataBase
+    url: jdbc:postgresql://postgresql:5432/sampleDataBase
     username: username
     password: password
 server:
